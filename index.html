@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./app/dist/css/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js"></script>
+
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chart">
+        <div class="chart__head">
+          <div class="chart__balance">
+            <span>My balance</span>
+            <h3>$921.48</h3>
+          </div>
+          <div class="chart__logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+        </div>
+        <div class="chart__body">
+          <div class="chart__title">
+            <h2>Spending - Last 7 days</h2>
+          </div>
+          <div class="chart__charts">
+            <canvas id="chart" class="chart__canvas"></canvas>
+          </div>
+          <div class="chart__total">
+            <div class="chart__this">
+              <span>Total this month</span>
+              <h3>$478.33</h3>
+            </div>
+            <div class="chart__last">
+              <span>+2.4%</span><span>from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>

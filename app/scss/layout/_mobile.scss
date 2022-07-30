@@ -1,0 +1,101 @@
+@use "../util/" as u;
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.chart {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: clamp(150px, 90%, 25rem);
+  gap: 1rem;
+
+  &__head,
+  &__body {
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+  }
+
+  &__head {
+    background-color: u.$p-soft-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: u.$very-pale-orange;
+  }
+
+  &__balance {
+    > span {
+      font-size: 0.85rem;
+    }
+
+    > h3 {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__body {
+    background-color: u.$very-pale-orange;
+  }
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__charts {
+    height: 200px;
+  }
+
+  &__chart {
+    height: 100px;
+    background-color: u.$p-soft-red;
+    margin-bottom: 0.2rem;
+    border-radius: 3px;
+  }
+
+  &__month {
+    font-size: 0.8rem;
+    color: u.$n-medium-brown;
+  }
+
+  &__total {
+    position: relative;
+    padding-top: 1.5rem;
+    padding-inline: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid u.$cream;
+    }
+  }
+
+  &__this {
+    font-size: 0.9rem;
+
+    > h3 {
+      font-size: 1.8rem;
+      margin-top: 0.65rem;
+    }
+  }
+
+  &__last {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    > span:first-child {
+      font-weight: 700;
+    }
+  }
+}
